@@ -15,6 +15,8 @@
         "laravel/framework": "^6.2",
         "laravel/tinker": "^2.0",
         "league/fractal": "^0.19.2",
+        "mews/captcha": "^3.1",
+        "overtrue/laravel-lang": "~3.0",
         "prettus/l5-repository": "^2.6",
         "robclancy/presenter": "^1.4"
     },
