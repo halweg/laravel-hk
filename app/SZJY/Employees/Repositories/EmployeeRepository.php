@@ -50,7 +50,7 @@ class EmployeeRepository extends BaseRepository implements EmployeeRepositoryInt
     public function createEmployee(array $data): Employee
     {
         $data['password'] = bcrypt($data['password']);
-        $data['user_id'] = $this->maxUserId() ? $this->maxUserId() + 1 : 1;
+        $data['user_id'] = app('Kra8\Snowflake\Snowflake')->next();
         return $this->create($data);
     }
 
@@ -113,8 +113,4 @@ class EmployeeRepository extends BaseRepository implements EmployeeRepositoryInt
         return $this->delete();
     }
 
-    public function maxUserId(): int
-    {
-        return (int)$this->model::max('user_id');
-    }
 }

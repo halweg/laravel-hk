@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8f9a3427e56afb9e8b2b2351ed3406e",
+    "content-hash": "c249f29454f9282ba43b34cc58a8d423",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -748,6 +748,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -800,6 +801,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -877,6 +879,66 @@
                 "mongodb"
             ],
             "time": "2020-03-04T07:57:00+00:00"
+        },
+        {
+            "name": "kra8/laravel-snowflake",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kra8/laravel-snowflake.git",
+                "reference": "98fa7d36ce92eb1ba6a431b1de85eaf3ebd95797"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kra8/laravel-snowflake/zipball/98fa7d36ce92eb1ba6a431b1de85eaf3ebd95797",
+                "reference": "98fa7d36ce92eb1ba6a431b1de85eaf3ebd95797",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/support": "^6|^7",
+                "php": "^7.2.5"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^5.0",
+                "phpunit/phpunit": "~8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kra8\\Snowflake\\Providers\\LaravelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kra8\\Snowflake\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Koki Asai",
+                    "email": "me@kra.dev"
+                }
+            ],
+            "description": "Snowflake for Laravel and Lumen.",
+            "homepage": "https://github.com/kra8/laravel-snowflake",
+            "keywords": [
+                "laravel",
+                "lumen",
+                "snowflake"
+            ],
+            "time": "2020-04-08T22:18:38+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1941,127 +2003,6 @@
             "time": "2019-12-15T19:35:24+00:00"
         },
         {
-            "name": "prettus/l5-repository",
-            "version": "2.6.42",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/andersao/l5-repository.git",
-                "reference": "24c473c08ab46759a2ebe8bb1ec6de1d7c9e9d1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/24c473c08ab46759a2ebe8bb1ec6de1d7c9e9d1e",
-                "reference": "24c473c08ab46759a2ebe8bb1ec6de1d7c9e9d1e",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "illuminate/config": "~5.0|~6.0|~7.0",
-                "illuminate/console": "~5.0|~6.0|~7.0",
-                "illuminate/database": "~5.0|~6.0|~7.0",
-                "illuminate/filesystem": "~5.0|~6.0|~7.0",
-                "illuminate/http": "~5.0|~6.0|~7.0",
-                "illuminate/pagination": "~5.0|~6.0|~7.0",
-                "illuminate/support": "~5.0|~6.0|~7.0",
-                "illuminate/validation": "~5.0|~6.0|~7.0",
-                "prettus/laravel-validation": "~1.1|~1.2"
-            },
-            "suggest": {
-                "league/fractal": "Required to use the Fractal Presenter (0.12.*).",
-                "prettus/laravel-validation": "Required to provide easy validation with the repository (1.1.*)",
-                "robclancy/presenter": "Required to use the Presenter Model (1.3.*)"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Prettus\\Repository\\Providers\\RepositoryServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Prettus\\Repository\\": "src/Prettus/Repository/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anderson Andrade",
-                    "email": "contato@andersonandra.de",
-                    "homepage": "http://andersonandra.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Laravel 5 - Repositories to  the database layer",
-            "homepage": "http://andersao.github.io/l5-repository",
-            "keywords": [
-                "cache",
-                "eloquent",
-                "laravel",
-                "model",
-                "repository"
-            ],
-            "time": "2020-03-14T18:53:21+00:00"
-        },
-        {
-            "name": "prettus/laravel-validation",
-            "version": "1.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/andersao/laravel-validator.git",
-                "reference": "3d43037c2f497df3f8fbf3d8c16954a83c72e530"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/andersao/laravel-validator/zipball/3d43037c2f497df3f8fbf3d8c16954a83c72e530",
-                "reference": "3d43037c2f497df3f8fbf3d8c16954a83c72e530",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "illuminate/support": "~5.4|^6.0|^7.0",
-                "illuminate/validation": "~5.4|^6.0|^7.0",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Prettus\\Validator\\": "src/Prettus/Validator/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Anderson Andrade",
-                    "email": "contato@andersonandra.de",
-                    "homepage": "http://andersonandra.de",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Laravel Validation Service",
-            "homepage": "http://andersao.github.io/laravel-validation",
-            "keywords": [
-                "laravel",
-                "service",
-                "validation"
-            ],
-            "time": "2020-03-14T19:28:36+00:00"
-        },
-        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -2496,63 +2437,6 @@
                 "uuid"
             ],
             "time": "2020-02-21T04:36:14+00:00"
-        },
-        {
-            "name": "robclancy/presenter",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robclancy/presenter.git",
-                "reference": "2e0a38970f238bcab407211b494482bfbb0e5aa1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robclancy/presenter/zipball/2e0a38970f238bcab407211b494482bfbb0e5aa1",
-                "reference": "2e0a38970f238bcab407211b494482bfbb0e5aa1",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "2.12.*",
-                "illuminate/view": ">=5.4",
-                "mockery/mockery": "^0.9.8",
-                "phpunit/phpunit": "5.7.*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Robbo\\Presenter\\PresenterServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Robbo\\Presenter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Robbo",
-                    "email": "robbo.clancy@gmail.com"
-                }
-            ],
-            "description": "Decorate your objects using presenters. Primarily to keep presentation logic out of your models.",
-            "keywords": [
-                "decorator",
-                "laravel",
-                "presenter"
-            ],
-            "time": "2018-07-30T20:36:45+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

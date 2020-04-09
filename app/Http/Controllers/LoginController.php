@@ -23,6 +23,16 @@ class LoginController extends BaseController
 
     public function showLoginForm(Request $request)
     {
+
+        $arr = [];
+        for ($i=0; $i <= 100000; $i++) {
+            $id = app('Kra8\Snowflake\Snowflake')->next();
+            if (in_array($id, $arr)) {
+                dd($id);
+            }
+            array_push($arr, $id);
+        }
+
         return view('auth.admin.login');
     }
 
