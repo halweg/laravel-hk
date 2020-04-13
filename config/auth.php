@@ -78,7 +78,7 @@ return [
 
         'employee' => [
             'driver' => 'eloquent',
-            'model' => App\SZJY\Employees\Employee::class,
+            'model' => App\Http\Models\Employee::class,
         ],
 
         // 'users' => [

@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Hong_Kong',
 
     /*
     |--------------------------------------------------------------------------
@@ -174,6 +174,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        //全局共享view
+        App\Providers\ViewComposerProvider::class,
 
     ],
 

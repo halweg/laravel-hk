@@ -38,7 +38,9 @@
 
                         </tbody>
                     </table>
-
+                    <div class="text-center">
+                        {{ $employees->onEachSide(5)->links() }}
+                    </div>
                 </div>
             </div>
         </div>

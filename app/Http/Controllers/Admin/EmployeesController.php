@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Models\Employee;
+use Illuminate\Support\Facades\Auth;
+
+Use \DateTime;
 
 class EmployeesController extends Controller
 {
@@ -15,8 +18,8 @@ class EmployeesController extends Controller
      */
     public function index(Request $request)
     {
+        $owner = Auth::guard('employee');
         $employees = Employee::paginate(2);
-        dd($employees);
         return view('admin.employee.index')->with('employees', $employees);
     }
 

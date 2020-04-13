@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\SZJY\Employees\Repositories\EmployeeRepository;
 use Auth;
-use App\SZJY\Employees\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Validation\ValidationException;
@@ -26,7 +24,7 @@ class LoginController extends BaseController
         ]);
     }
 
-    public function login(LoginRequest $request)
+    public function login(Request $request)
     {
         $details = $request->only('username', 'password');
 

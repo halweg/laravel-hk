@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\SZJY\Employees\Requests\LoginRequest;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
-use App\SZJY\Users\User;
 
 use Auth;
 
@@ -15,4 +13,5 @@ class MailController extends BaseController
     {
         return view('admin.mail.list');
     }
+
 }
